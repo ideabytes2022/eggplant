@@ -1,0 +1,49 @@
+﻿to handle chrome
+	//Typetext AltKey,F2
+	TypeText windowsKey,"r"
+	TypeText "chrome"
+	TypeText return
+end chrome
+to handle shoppeesite
+	TypeText "https://shopee.in/",return
+	wait 5
+	//Click "SellerCentreSellonShopeeDownlo"
+end shoppeesite
+to handle searchbar
+	set the searchRectangle to screen_part_handler.ScreenPart("TopHalf")
+	wait 5
+	put EveryImageLocation(text:"Shopee",caseSensitive:yes,WaitFor:20) into var
+	
+	Click item 3 of var+[110,-14]
+	//Click {Text:"Shopee", WaitFor:8}
+	set the SearchRectangle to []
+	Wait 10  
+	
+	
+	//TypeText "samsung galaxy10",return
+	//ScrollWheelDown 8
+	
+end searchbar
+//Click (Text:"Shopee", WaitFor:8)
+to addproductstocart
+	Click {Text:"Mobiles & Accessories", WaitFor:20}
+	put ImageLocation(text:"PUBG Finger Sleeve Pubg") into var
+	log var
+	Set the SearchRectangle to[[var.x+125,var.y-210],[var.x+290,var.y+20]]
+	Click {Text:"ALPINO Lifeline USB", dpi:"144", EnhanceLocalContrast:"Yes", WaitFor:8}
+	set the SearchRectangle to []
+	wait 2
+	Click {Text:"Add To Cart", WaitFor:10}
+	//put FoundImageInfo
+end addproductstocart
+to handle loginpage 
+	set the SearchRectangle to screen_part_handler.ScreenPart("TopRightQuadrant")
+	Click text:"Log In",hotspot:[0,57]
+	TypeText "rajashekar"
+	Click text:"Log In",hotspot:[0,135]
+	TypeText "raja@123",return
+	//Click "LogIn_1"
+	//TypeText "rajashekar"
+end loginpage
+
+
