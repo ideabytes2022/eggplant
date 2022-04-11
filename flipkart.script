@@ -1,0 +1,19 @@
+﻿TypeText AltKey,F2
+TypeText "google-chrome"
+TypeText return
+wait 5
+TypeText "Flipkart.in",return
+set the searchRectangle to screen_part_handler.ScreenPart("TopHalf")
+put imageLocation(text:"Login") into Login
+//Click text:"Login", waitFor:5
+set the searchRectangle to [[Login.x+64,Login.y-20],[Login.x+190,Login.y+16]]
+Click text:"More", waitFor:100
+
+
+
+put imageLocation(text:"More") into More
+//Click text:"Login", waitFor:5
+set the searchRectangle to [[More.x-112,More.y+33],[More.x+100,More.y+250]]
+
+
+
