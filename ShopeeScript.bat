@@ -1,0 +1,1 @@
+"C:\Program Files\Eggplant\runscript.bat" "E:\practice suite.suite\Scripts\shopee.script" -CommandLineOutput yes
